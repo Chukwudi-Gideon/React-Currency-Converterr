@@ -1,0 +1,148 @@
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #c9ced7;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem; 
+}
+
+/* --- MOBILE-FIRST BASE STYLES --- */
+.converter-card {
+  width: 100%;
+  max-width: 100%;
+  padding: 1.25rem; 
+  background-color: #e4d3d3;
+  border-radius: 12px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  text-align: center;
+}
+
+.converter-card h1 {
+  color: #1f2937; 
+  margin-bottom: 1.25rem;
+  font-size: 1.35rem; 
+  font-weight: 700;
+}
+
+.converter-card label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #4b5563; 
+  margin-bottom: 0.4rem;
+  text-align: left; 
+}
+
+.converter-card p {
+  font-weight: 600;
+  color: #374151; 
+  margin: 0.5rem 0 0.4rem 0;
+  font-size: 0.8rem; 
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-align: left;
+}
+
+.converter-card input[type="number"], 
+.converter-card select {
+  width: 100%;
+  padding: 12px; 
+  margin-bottom: 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 1rem; 
+  color: #1f2937; 
+  background-color: #f9fafb; 
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+}
+
+.converter-card input:focus, 
+.converter-card select:focus {
+  outline: none;
+  border-color: #2563eb; 
+  background-color: #ffffff; 
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
+}
+
+/* Mobile Compact Result Container */
+.result-display {
+  font-size: 1.15rem; 
+  font-weight: 500;
+  color: #6346cd !important; 
+  padding: 1.25rem; 
+  text-align: center;
+  margin-top: 1rem;
+  text-transform: none; 
+  letter-spacing: normal;
+
+}
+.amount{
+  font-size: 1.35rem ; 
+    color: #1e047a !important; 
+}
+.curr{
+  color: #1e047a !important; 
+  font-style: italic
+}
+
+/* --- LARGE SCREEN/TABLET DESKTOP ENHANCEMENTS --- */
+@media (min-width: 600px) {
+  body {
+    padding: 2rem;
+  }
+
+  .converter-card {
+    max-width: 420px; 
+    padding: 2.5rem;
+    border-radius: 16px;
+  }
+
+  .converter-card h1 {
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+  }
+
+  .converter-card p {
+    font-size: 0.85rem;
+    margin: 0.75rem 0 0.5rem 0;
+  }
+
+  .converter-card input[type="number"], 
+  .converter-card select {
+    padding: 14px 16px;
+    margin-bottom: 1.5rem;
+    border-radius: 10px;
+  }
+
+  .result-display {
+    font-size: 1.5rem;
+    padding: 2rem;
+    margin-top: 1.5rem;
+  }
+}
+
+/* Utility Animations */
+.LoadingMsg {
+  text-transform: uppercase;
+  color: #2563eb; 
+  font-size: 1.25rem;
+  letter-spacing: 2px; 
+  font-family: inherit; 
+  font-weight: 700;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
